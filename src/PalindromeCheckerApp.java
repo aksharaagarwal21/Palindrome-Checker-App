@@ -1,26 +1,30 @@
-// Version 2.0
-// UC2: Print a Hardcoded Palindrome Result
+// Version 3.0
+// UC3: Palindrome Check Using String Reverse
 
-public class UseCase2PalindromeCheckerApp {
+public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
-        // Hardcoded string
-        String word = "madam";
+        // Original string
+        String original = "racecar";
 
-        // Reverse the string
+        // Variable to store reversed string
         String reversed = "";
-        for (int i = word.length() - 1; i >= 0; i--) {
-            reversed = reversed + word.charAt(i);
+
+        // Reverse the string using a for loop
+        for (int i = original.length() - 1; i >= 0; i--) {
+            reversed = reversed + original.charAt(i);
         }
 
-        // Check palindrome using if-else
-        if (word.equals(reversed)) {
-            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        // Display reversed string
+        System.out.println("Original String: " + original);
+        System.out.println("Reversed String: " + reversed);
+
+        // Compare original and reversed string
+        if (original.equals(reversed)) {
+            System.out.println("Result: The string is a Palindrome.");
         } else {
-            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+            System.out.println("Result: The string is NOT a Palindrome.");
         }
-
-        System.out.println("Program Finished.");
     }
 }
