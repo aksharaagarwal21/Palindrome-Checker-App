@@ -1,23 +1,26 @@
-// Version 1.0
-// UC1: Application Entry & Welcome Message
+// Version 2.0
+// UC2: Print a Hardcoded Palindrome Result
 
-public class PalindromeCheckerApp {
+public class UseCase2PalindromeCheckerApp {
 
-    // Main method - Entry point of the application
     public static void main(String[] args) {
 
-        // Display application information
-        System.out.println("=================================");
-        System.out.println("      Palindrome Checker App     ");
-        System.out.println("=================================");
-        System.out.println("Application Version: 1.0");
-        System.out.println("Author: System Demo");
-        System.out.println("---------------------------------");
-        System.out.println("Welcome! This application checks");
-        System.out.println("whether a given string is a");
-        System.out.println("palindrome.");
-        System.out.println("---------------------------------");
+        // Hardcoded string
+        String word = "madam";
 
-        System.out.println("Application initialized successfully.");
+        // Reverse the string
+        String reversed = "";
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reversed = reversed + word.charAt(i);
+        }
+
+        // Check palindrome using if-else
+        if (word.equals(reversed)) {
+            System.out.println("The word \"" + word + "\" is a Palindrome.");
+        } else {
+            System.out.println("The word \"" + word + "\" is NOT a Palindrome.");
+        }
+
+        System.out.println("Program Finished.");
     }
 }
